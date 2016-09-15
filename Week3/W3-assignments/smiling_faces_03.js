@@ -12,6 +12,7 @@ function generateFaces() {
         make_faces.style.left = random_spot_left + "px";
         theLeftSide.appendChild(make_faces)[i];
       }
+    
   leftSideImages = theLeftSide.cloneNode(true);
   leftSideImages.removeChild(leftSideImages.lastChild);
   theRightSide.appendChild(leftSideImages);
