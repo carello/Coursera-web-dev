@@ -4,7 +4,7 @@ var theRightSide = document.getElementById("rightSide");
 var theBody = document.getElementsByTagName("body")[0];
 
 function clean_leftface() {
-  while (theLeftSide.childNodes[2])
+  while (theLeftSide.firstChild)
     theLeftSide.removeChild(theLeftSide.lastChild);
   }
 
@@ -33,9 +33,9 @@ function generateFaces() {
         function nextLevel(event) {
           event.stopPropagation();
           //theLeftSide.removeChild(theLeftSide.lastChild);
-          theRightSide.removeChild(theRightSide.lastChild);
+          //theRightSide.removeChild(theRightSide.lastChild);
           clean_leftface();
-          //clean_rightface();
+          clean_rightface();
           //alert("TEST")
           //console.log("TEST")
           numberOfFaces += 5;
