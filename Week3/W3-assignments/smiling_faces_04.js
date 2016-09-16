@@ -31,16 +31,14 @@ function generateFaces() {
 
     theLeftSide.lastChild.onclick =
         function nextLevel(event) {
-          //theLeftSide.removeChild(theLeftSide.lastChild);
-          //theRightSide.removeChild(theRightSide.lastChild);
           event.stopPropagation();
           //theLeftSide.removeChild(theLeftSide.lastChild);
           theRightSide.removeChild(theRightSide.lastChild);
-          numberOfFaces += 5;
           clean_leftface();
           //clean_rightface();
           //alert("TEST")
           //console.log("TEST")
+          numberOfFaces += 5;
           generateFaces();
 
         };
