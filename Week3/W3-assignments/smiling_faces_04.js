@@ -3,6 +3,17 @@ var theLeftSide = document.getElementById("leftSide");
 var theRightSide = document.getElementById("rightSide");
 var theBody = document.getElementsByTagName("body")[0];
 
+function clean_leftface() {
+  while (theLeftSide.childNodes[2])
+    theLeftSide.removeChild(theLeftSide.lastChild);
+  }
+
+function clean_rightface() {
+  while (theRightSide.firstChild)
+      theRightSide.removeChild(theRightSide.lastChild);
+  }
+
+
 function generateFaces() {
     for (var i=0; i < numberOfFaces; i++) {
         var make_faces = document.createElement("img");
@@ -14,31 +25,32 @@ function generateFaces() {
         theLeftSide.appendChild(make_faces)[i];
       };
 
-  leftSideImages = theLeftSide.cloneNode(true);
-  leftSideImages.removeChild(leftSideImages.lastChild);
-  theRightSide.appendChild(leftSideImages);
+    leftSideImages = theLeftSide.cloneNode(true);
+    leftSideImages.removeChild(leftSideImages.lastChild);
+    theRightSide.appendChild(leftSideImages);
 
+    theLeftSide.lastChild.onclick =
+        function nextLevel(event) {
+          //theLeftSide.removeChild(theLeftSide.lastChild);
+          //theRightSide.removeChild(theRightSide.lastChild);
+          event.stopPropagation();
+          //theLeftSide.removeChild(theLeftSide.lastChild);
+          theRightSide.removeChild(theRightSide.lastChild);
+          numberOfFaces += 5;
+          clean_leftface();
+          //clean_rightface();
+          //alert("TEST")
+          //console.log("TEST")
+          generateFaces();
 
-
-  theLeftSide.lastChild.onclick =
-      function nextLevel(event) {
-        theLeftSide.removeChild(theLeftSide.lastChild);
-        theRightSide.removeChild(theRightSide.lastChild);
-        event.stopPropagation();
-        //theLeftSide.removeChild(theLeftSide.lastChild);
-        //theRightSide.removeChild(theRightSide.lastChild);
-        numberOfFaces += 1;
-
-
-        generateFaces();
-
-      };
-
-
+        };
 
   theBody.onclick = function gameOver() {
       alert("Game Over!");
       theBody.onclick = null;
       theLeftSide.lastChild.onClick = null;
+      //clean_leftface();
+      //clean_rightface();
+      //location.reload();
     };
 }
