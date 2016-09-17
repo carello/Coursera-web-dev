@@ -18,7 +18,7 @@ function do_game() {
 
           guess_input = guess_input_color;
           guesses += 1;
-          if (guess_input == target) {
+          if (guess_input === target) {
             finished = true;
           }
       }

@@ -23,7 +23,7 @@ function do_game() {
 }
 
 function check_guess() {
-  if (colors.indexOf(guess_input) == -1) {
+  if (colors.indexOf(guess_input) === -1) {
     alert("I don't recognize that color!");
     return false;
   }
