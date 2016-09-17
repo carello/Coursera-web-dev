@@ -22,8 +22,8 @@ function generateFaces() {
         make_faces.src="smile.png";
         make_faces.style.top = random_spot_top + "px";
         make_faces.style.left = random_spot_left + "px";
-        theLeftSide.appendChild(make_faces)[i];
-      };
+        theLeftSide.appendChild(make_faces);
+      }
 
     leftSideImages = theLeftSide.cloneNode(true);
     leftSideImages.removeChild(leftSideImages.lastChild);
