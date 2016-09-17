@@ -4,7 +4,7 @@ var guess_input;
 var finished = false;
 var guesses = 0;
 
-colors=['black', 'blue', 'brown', 'cyan', 'green', 'magenta', 'orange', 'red', 'yellow']
+colors=['black', 'blue', 'brown', 'cyan', 'green', 'magenta', 'orange', 'red', 'yellow'];
 
 function do_game() {
   var random_number = Math.random() * 8;

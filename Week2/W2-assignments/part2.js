@@ -4,7 +4,7 @@ var guess_input;
 var finished = false;
 var guesses = 0;
 
-colors=['black', 'blue', 'brown', 'cyan', 'green', 'magenta', 'orange', 'red', 'yellow']
+colors=['black', 'blue', 'brown', 'cyan', 'green', 'magenta', 'orange', 'red', 'yellow'];
 
 function do_game() {
   var random_number = Math.random() * 8;
@@ -24,7 +24,7 @@ function do_game() {
 
 function check_guess() {
   if (colors.indexOf(guess_input) == -1) {
-    alert("I don't recognize that color!")
+    alert("I don't recognize that color!");
     return false;
   }
   if (guess_input > target) {

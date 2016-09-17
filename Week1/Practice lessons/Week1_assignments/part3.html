@@ -12,7 +12,7 @@
       label:hover { font-size:40px}
       .lsets { width:auto}
       textarea { width:360px; height:50px}
-      label.range { text-align:center; width:50px; color:"red"; font-weight:bold; padding:5px }
+      label.range { text-align:center; width:50px; color:black; font-weight:bold; padding:5px }
       label.indicator { padding:5px 0 5px 0 }
       .bg-red { background-color:red }
       .bg-purple { background-color:purple }
@@ -31,19 +31,19 @@
       </fieldset>
       <fieldset class="fset">
         <legend>Your General Details</legend>
-        <label for "yourname">Name:</label>
+        <label for="yourname">Name:</label>
           <input type="text" id="yourname" name="yourname" placeholder="Your Full Name"><br>
-        <label for "gender">Gender:</label>
+        <label for="gender">Gender:</label>
           <input type="radio" class="lsets" id="gender" name="gender" value="male" required>Male
           <input type="radio" class="lsets" id="gender" name="gender" value="female" required>Female
           <br>
-        <label for "age">Age:</label>
+        <label for="age">Age:</label>
           <input type="number" id="age" name="age" placeholder="18" required><br>
-        <label for "birthdate">Date of Birth:</label>
+        <label for="birthdate">Date of Birth:</label>
           <input type="date" id="birthdate" name="birthdate" placeholder="dd/mm/yyyy"><br>
-        <label for "favcolor">Favorite Color:</label>
+        <label for="favcolor">Favorite Color:</label>
           <input type="color" id="favcolor" name="favcolor"><br>
-        <label for "country">Which country:</label>
+        <label for="countries">Which country:</label>
           <select id="countries" name="countries">
                       <option value=""></option>
                       <option value="United States">United States</option>
@@ -55,24 +55,24 @@
       </fieldset>
       <fieldset class="fset">
         <legend>Your Indicators</legend>
-        <label for "height" class="indicator height-indicator">Height:</label>
+        <label for="height" class="indicator height-indicator">Height:</label>
         <label class="range bg-red">Short</label>
         <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"><label class="range bg-purple">Tall</label><br>
 
-        <label for "salary" class="indicator salary-indicator">Salary:</label>
+        <label for="salary" class="indicator salary-indicator">Salary:</label>
         <label class="range bg-red">Poor</label>
         <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary"><label class="range bg-purple">Rich</label><br>
 
       </fieldset>
       <fieldset class="fset">
         <legend>Your Contact Information</legend>
-        <label for "email">Email:</label>
+        <label for="email">Email:</label>
           <input type="email" id="email" name="email" required><br>
-        <label for "mobile">Mobile:</label>
+        <label for="mobile">Mobile:</label>
           <input type="tel" id="mobile" name="mobile"><br>
-        <label for "address">Address:</label>
+        <label for="address">Address:</label>
           <textarea id="address" name="address"></textarea><br>
-        <label for "contact" >Method to contact you:</label>
+        <label for="contact" >Method to contact you:</label>
           <input type="checkbox" class="lsets" id="contact" name="contact" value="email">Email
           <input type="checkbox" class="lsets" id="contact" name="contact" value="whatsapp">Whatsapp
           <input type="checkbox" class="lsets" id="contact" name="contact" value="inappchat">In-app chat
